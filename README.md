@@ -30,13 +30,13 @@ Here is the schema I followed to build the pipeline:
 
 4) Scripts:
 
-*online_store_app.py: dash script to create the online store application.
+online_store_app.py: dash script to create the online store application.
 	-dash is a tool created by Plotly to quickly build a web application using different prebuild UI components.
 
-*publish_data_to_pubsub_topic.py: publishes data from the online store into the Pub/Sub topic.
+publish_data_to_pubsub_topic.py: publishes data from the online store into the Pub/Sub topic.
 
-*pipeline_config.py: this file contains all the configuration like Pub/Sub subscriber details, service account key path, 
+pipeline_config.py: this file contains all the configuration like Pub/Sub subscriber details, service account key path, 
 					 MySQL DB connection details, and table details.
 					 
-*mainPipeline.py: In this pipeline script, we are reading data from the Pub/Sub, unnesting the data, 
+mainPipeline.py: In this pipeline script, we are reading data from the Pub/Sub, unnesting the data, 
 				  and storing the final data in a relational database.
